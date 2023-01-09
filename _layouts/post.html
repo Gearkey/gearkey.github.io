@@ -1,0 +1,60 @@
+---
+layout: base
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                <i class="icon-post-date"> {{ page.date | date: "%Y-%m-%d" }}</i>
+            </time>
+            {% if page.categories.size > 0 %}
+            <span class="post-category">
+            <i class="icon-post-category">
+            {% for page_category in page.categories %}
+                <a href="{{ site.baseurl }}/category/#{{ page_category }}">{{ page_category }}</a>
+            {% endfor %}
+            </i>
+        </span> {% endif %} {% if page.tags.size > 0 %}
+            <span class="post-tag">
+            <i class="icon-post-tag">
+            {% for page_tag in page.tags %}
+                <a href="{{ site.baseurl }}/tags/#{{ page_tag }}">{{ page_tag }}</a>
+            {% endfor %}
+            </i>
+        </span>{% endif %}
+        </p>
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+    
+    <div class="post-link">
+        永久链接：<a href="">{{ site.title }}</a>
+        {% if page.zhihu %} / <a target="_blank" href="{{ page.zhihu }}">知乎</a>{% endif %}
+        {% if page.lofter %} / <a target="_blank" href="{{ page.lofter }}">LOFTER</a>{% endif %}
+        {% if page.tieba %} / <a target="_blank" href="{{ page.tieba }}">贴吧</a>{% endif %}
+        {% if page.bilibili %} / <a target="_blank" href="{{ page.bilibili }}">Bilibili</a>{% endif %}
+        {% if page.weibo %} / <a target="_blank" href="{{ page.weibo }}">微博</a>{% endif %}
+        {% if page.twitter %} / <a target="_blank" href="{{ page.twitter }}">Twitter</a>{% endif %}
+        {% if page.juejin %} / <a target="_blank" href="{{ page.juejin }}">掘金</a>{% endif %}
+        {% if page.jianshu %} / <a target="_blank" href="{{ page.jianshu }}">简书</a>{% endif %}
+        {% if page.segmentfault %} / <a target="_blank" href="{{ page.segmentfault }}">SegmentFault</a>{% endif %}
+        {% if page.cnblogs %} / <a target="_blank" href="{{ page.cnblogs }}">博客园</a>{% endif %}
+        {% if page.weixin %} / <a target="_blank" href="{{ page.weixin }}">微信</a>{% endif %}
+        {% if page.xiaohongshu %} / <a target="_blank" href="{{ page.xiaohongshu }}">小红书</a>{% endif %}
+        {% if page.coolapk %} / <a target="_blank" href="{{ page.coolapk }}">酷安</a>{% endif %}
+    </div>
+
+    <div class="post-nav">
+        {% if page.next %}
+        <a href="{{ page.next.url | prepend: site.baseur }}" class="pre"><i class="icon-post-pre"> {{ page.next.title }} </i></a>
+        {% endif %} {% if page.previous %}
+        <a href="{{ page.previous.url | prepend: site.baseurl }}" class="next"> {{ page.previous.title }} <i class="icon-post-next"></i></a>
+        {% endif %}
+    </div>
+
+</article>

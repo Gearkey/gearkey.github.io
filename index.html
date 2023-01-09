@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+{% for post in site.posts %}
+<div class="post">
+
+    <h2 class="post-title">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            {% if post.title %}
+            {{ post.title }}
+            {% else %}
+            {{ site.page_no_title }}
+            {% endif %}
+        </a>
+    </h2>
+
+    <div class="post-meta">
+        <span>
+        <i class="icon-post-date"> {{ post.date | date: "%Y-%m-%d" }}</i>
+        <i class="icon-post-category"> <a href="{{ site.baseurl }}/category/#{{ post.categories }}">{{ post.categories }}</a></i>
+        </span>
+
+    </div>
+</div>
+{% endfor %}

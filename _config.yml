@@ -1,0 +1,45 @@
+title: 河畔志
+description: 漫步，追寻风筝
+keywords: 齿轮key,Gearkey,河畔志,河畔,博客,Firefox,Lofter,贴吧
+author: 齿轮key
+github_username: Gearkey
+permalink: /:title.html
+plugins:
+  - jekyll-redirect-from
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+menu:
+  - page: 首页
+    directory: .
+    icon: icon-home
+  - page: 关于
+    directory: about/
+    icon: icon-about
+  - page: 链接
+    directory: links/
+    icon: icon-rss
+  - page: 标签
+    directory: tags/
+    icon: icon-tags
+
+codehub:
+  - title: LOFTER 是主要镜像
+    url: https://gearkey.lofter.com/
+  - title: 可以在这里看到我的推荐
+    url: https://www.lofter.com/shareblog/gearkey
+  - title: 会在知乎回答些问题
+    url: https://www.zhihu.com/people/gearkey
+  - title: 也有在贴吧吹水
+    url: https://tieba.baidu.com/home/main?id=tb.1.3441fb3e.bJs6HD7MV9-n8Cez8daEoQ
+  - title: 当然最全面的就是本博客，点击订阅 (>▽<)
+    url: /feed.xml
+
+links:
+  - title: 关注 Lofter 贴吧喵
+    url: https://tieba.baidu.com/f?kw=lofter
+  - title: 关注 Firefox 贴吧谢谢喵
+    url: https://tieba.baidu.com/f?kw=firefox
