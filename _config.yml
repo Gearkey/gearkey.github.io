@@ -39,7 +39,13 @@ codehub:
     url: /feed.xml
 
 links:
-  - title: 关注 Lofter 贴吧喵
+  - title: 跑跑火狐狸社区
+    url: https://firefox.popkart.org/
+  - title: 罗小黑战记吧
+    url: https://tieba.baidu.com/f?kw=罗小黑战记
+  - title: LOFTER 吧
     url: https://tieba.baidu.com/f?kw=lofter
-  - title: 关注 Firefox 贴吧谢谢喵
+  - title: Firefox 吧
+    url: https://tieba.baidu.com/f?kw=firefox
+  - title: Github 吧
     url: https://tieba.baidu.com/f?kw=firefox
