@@ -4,6 +4,7 @@ keywords: 齿轮key,Gearkey,河畔志,河畔,博客,Firefox,Lofter,贴吧
 author: 齿轮key
 github_username: Gearkey
 permalink: /:title.html
+timezone: Asia/Shanghai
 plugins:
   - jekyll-redirect-from
 
